@@ -2,7 +2,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 import { connectToDatabase } from "./db.config.js";
 import { server } from './server.js';
-
+app.set('MONGODB', process.env.MONGODB || 3000);
 server.listen(3000, () => {
     // console.log(PROCESS.env.MONGODB);
     console.log('Server is running on port 3000');
